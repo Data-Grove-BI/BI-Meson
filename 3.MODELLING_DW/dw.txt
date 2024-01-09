@@ -1,0 +1,42 @@
+Tablas de Hechos:
+
+Fact_Ventas:
+
+id (clave principal)
+id_hticket (clave externa que conecta con la dimensión de tickets)
+id_fecha (clave externa que conecta con la dimensión de fechas)
+cantidad
+precio_unitario
+total
+Fact_Cierres:
+
+id (clave principal)
+id_fecha (clave externa que conecta con la dimensión de fechas)
+efectivo
+saldo
+Dimensiones:
+
+Dim_Fechas:
+
+id_fecha (clave principal)
+fecha
+year_file
+Dim_HTickets:
+
+id_hticket (clave principal)
+numcaj
+fecha
+year_file
+Dim_HLITICKET:
+
+id_hliticket (clave principal)
+numtic
+numcaj
+codigo
+descri
+cantidad
+precio
+year_file
+Con este modelo, puedes conectar las tablas de hechos (Fact_Ventas y Fact_Cierres) a las dimensiones correspondientes utilizando las claves externas. La dimensión Dim_Fechas actúa como el punto de conexión común entre las tablas de hechos.
+
+Por favor, ten en cuenta que este es un modelo básico y puede necesitar ajustes según los requisitos específicos de tu negocio y análisis. Asegúrate de adaptarlo según la complejidad y los detalles que necesites incorporar en tu sistema.
